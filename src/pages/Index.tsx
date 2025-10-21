@@ -1,12 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from '@/components/Header';
+import { Hero } from '@/components/Hero';
+import { TrustedBy } from '@/components/TrustedBy';
+import { Services } from '@/components/Services';
+import { WhyChoose } from '@/components/WhyChoose';
+import { Portfolio } from '@/components/Portfolio';
+import { Testimonials } from '@/components/Testimonials';
+import { CTASection } from '@/components/CTASection';
+import { Footer } from '@/components/Footer';
 
+/**
+ * Main landing page for Vonile - Creative Agency
+ * Fully responsive, custom components, no UI libraries
+ */
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      {/* Fixed header with navigation */}
+      <Header />
+      
+      {/* Main content sections */}
+      <main>
+        <Hero />
+        <TrustedBy />
+        <Services />
+        <WhyChoose />
+        <Portfolio />
+        <Testimonials />
+        <CTASection />
+      </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
